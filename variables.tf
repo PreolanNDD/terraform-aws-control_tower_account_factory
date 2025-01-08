@@ -6,6 +6,7 @@
 #########################################
 variable "ct_management_account_id" {
   description = "Control Tower Management Account Id"
+  default = "194722434270"
   type        = string
   validation {
     condition     = can(regex("^\\d{12}$", var.ct_management_account_id))
@@ -14,6 +15,7 @@ variable "ct_management_account_id" {
 }
 variable "log_archive_account_id" {
   description = "Log Archive Account Id"
+  default = "216989125174"
   type        = string
   validation {
     condition     = can(regex("^\\d{12}$", var.log_archive_account_id))
@@ -22,6 +24,7 @@ variable "log_archive_account_id" {
 }
 variable "audit_account_id" {
   description = "Audit Account Id"
+  default = "980921719391"
   type        = string
   validation {
     condition     = can(regex("^\\d{12}$", var.audit_account_id))
@@ -51,6 +54,7 @@ variable "aft_framework_repo_git_ref" {
 
 variable "aft_management_account_id" {
   description = "AFT Management Account ID"
+  default = "717279690551"
   type        = string
   validation {
     condition     = can(regex("^\\d{12}$", var.aft_management_account_id))

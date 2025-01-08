@@ -5,6 +5,24 @@ module "packaging" {
   source = "./modules/aft-archives"
 }
 
+module "aft" {
+  source = "github.com/aws-ia/terraform-aws-control_tower_account_factory"
+  # Required Vars
+  ct_management_account_id    = "194722434270"
+  log_archive_account_id      = "216989125174"
+  audit_account_id            = "980921719391"
+  aft_management_account_id   = "717279690551"
+  github_username             = "PreolanNDD"
+  ct_home_region              = "us-east-1"
+  tf_backend_secondary_region = "us-west-2"
+  # VCS Vars
+  vcs_provider                                  = "github"
+  account_request_repo_name                     = "PreolanNDD/account_request"
+  global_customizations_repo_name               = "PreolanNDD/global_customizations"
+  account_customizations_repo_name              = "PreolanNDD/account_customizations"
+  account_provisioning_customizations_repo_name = "PreolanNDD/account_provisioning_customizations"
+}
+
 module "aft_account_provisioning_framework" {
   providers = {
     aws = aws.aft_management
