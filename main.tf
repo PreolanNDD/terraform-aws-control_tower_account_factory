@@ -12,7 +12,6 @@ module "aft" {
   log_archive_account_id      = "216989125174"
   audit_account_id            = "980921719391"
   aft_management_account_id   = "717279690551"
-  github_username             = "PreolanNDD"
   ct_home_region              = "us-east-1"
   tf_backend_secondary_region = "us-west-2"
   # VCS Vars
