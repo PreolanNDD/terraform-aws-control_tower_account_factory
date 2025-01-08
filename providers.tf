@@ -2,6 +2,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 provider "aws" {
+  region = "us-east-1"
+}
+
+provider "aws" {
   alias  = "ct_management"
   region = var.ct_home_region
   # The default profile or environment variables should authenticate to the Control Tower Management Account as Administrator
