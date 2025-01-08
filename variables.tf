@@ -64,6 +64,7 @@ variable "aft_management_account_id" {
 
 variable "ct_home_region" {
   description = "The region from which this module will be executed. This MUST be the same region as Control Tower is deployed."
+  default = "us-east-1"
   type        = string
   validation {
     condition     = can(regex("(us(-gov)?|ap|ca|cn|eu|sa|me|af|il)-(central|(north|south)?(east|west)?)-\\d", var.ct_home_region))
